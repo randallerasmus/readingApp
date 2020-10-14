@@ -1,0 +1,26 @@
+.example-button-row {
+  display: block;
+  width: 100%;
+}
+
+.example-button-row .mat-button-base {
+  margin: 8px 8px 8px 0;
+}
+
+.header-letter-one{
+  padding-top: 1%;
+  font-weight: bolder;
+  font-size: x-large;
+  text-align: center;
+}
+
+.example-button-row .mat-raised-button {
+  font-size: 280%;
+  height: 70px;
+  width: 10%;
+}
+
+.phonetic-sound {
+  padding-top: 5%;
+  text-align: center;
+}

@@ -1,0 +1,17 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <button mat-icon-button>
+      <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
+    </button>
+    <h1>Toddler Reading App </h1>
+    <span class="menu-spacer"></span>
+    <div>
+      <a mat-button [routerLink]="'/one-letter'"> One Letter </a>
+      <a mat-button [routerLink]="'/two-letter'"> Two Letter </a>
+      <a mat-button [routerLink]="'/three-letter'"> Three Letters </a>
+      <a mat-button [routerLink]="'/four-letter'"> Four letters </a>
+      <a mat-button [routerLink]="'/random-words'"> Random Words </a>
+      <a mat-button [routerLink]="'/full-sentence'"> Full Sentences </a>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>
