@@ -22,6 +22,7 @@ import { FourLetterComponent } from './four-letter-words/four-letter.component';
 import { RandomWordsComponent } from './random-words/random-words.component';
 import { FullSentenceComponent } from './full-sentence/full-sentence.component';
 import { MatCarouselModule } from '@ngmodule/material-carousel';
+import {MatExpansionModule} from '@angular/material/expansion';
 
 
 @NgModule({
@@ -48,6 +49,7 @@ import { MatCarouselModule } from '@ngmodule/material-carousel';
     RouterModule,
     AppRoutingModule,
     MatCarouselModule.forRoot(),
+    MatExpansionModule,
 
   ],
   providers: [],

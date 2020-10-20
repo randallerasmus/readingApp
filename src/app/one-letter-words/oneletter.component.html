@@ -4,44 +4,38 @@
   <h2 class="header-letter-one" >Click any letter</h2>
 </div>
 <mat-divider></mat-divider>
-<section>
+<mat-accordion>
 
-  <div class="example-button-row">
-    <button mat-raised-button color="primary" (click)="toggleShow()">A</button>
-    <button mat-raised-button color="primary">B</button>
-    <button mat-raised-button color="primary">C</button>
-    <button mat-raised-button color="primary">D</button>
-    <button mat-raised-button color="primary">E</button>
-    <button mat-raised-button color="primary">F</button>
-    <button mat-raised-button color="primary">G</button>
-    <button mat-raised-button color="primary">H</button>
-    <button mat-raised-button color="primary">I</button>
-    <button mat-raised-button color="primary">J</button>
-    <button mat-raised-button color="primary">K</button>
-    <button mat-raised-button color="primary">L</button>
-    <button mat-raised-button color="primary">M</button>
-    <button mat-raised-button color="primary">N</button>
-    <button mat-raised-button color="primary">O</button>
-    <button mat-raised-button color="primary">P</button>
-    <button mat-raised-button color="primary">Q</button>
-    <button mat-raised-button color="primary">R</button>
-    <button mat-raised-button color="primary">S</button>
-    <button mat-raised-button color="primary">T</button>
-    <button mat-raised-button color="primary">U</button>
-    <button mat-raised-button color="primary">V</button>
-    <button mat-raised-button color="primary">W</button>
-    <button mat-raised-button color="primary">X</button>
-    <button mat-raised-button color="primary">Y</button>
-    <button mat-raised-button color="primary">Z</button>
-    <mat-divider></mat-divider>
+  <mat-expansion-panel (opened)="panelOpenState = true" [hideToggle]="true"
+                       (closed)="panelOpenState = false">
+    <mat-expansion-panel-header class="mat-expansion-panel-header" [collapsedHeight]="customCollapsedHeight"
+                                [expandedHeight]="customExpandedHeight">
 
-    <div class="phonetic-sound">
-    <button mat-raised-button color="accent" *ngIf="isShown">Apple</button>
-    <button mat-raised-button color="accent" *ngIf="isShown">Ant</button>
-    <button mat-raised-button color="accent" *ngIf="isShown">Arrow</button>
-    </div>
-<!--    Here i need to get the worksheet in from worksheetfun-->
-<!--    speech playback.-->
-<!--    https://www.education.com/worksheet/article/coloring-learn-letter-a/-->
-  </div>
-</section>
+      <mat-panel-description style="display: block" *ngFor="let letter of letters">
+
+          <div class="example-button-row">
+            <button mat-raised-button color="primary" (click)="toggleShow(letter)">{{letter}}</button>
+          </div>
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+   </mat-expansion-panel>
+</mat-accordion>
+<div class="phonetic-sound">
+  <button mat-raised-button color="accent" *ngIf="isShown">{{Asound}}</button>
+</div>
+<!--<section>-->
+
+<!--  <div class="example-button-row" >-->
+<!--    <button mat-raised-button color="primary" (click)="toggleShow(letter)">{{letter}}</button>-->
+
+<!--    <div class="phonetic-sound">-->
+<!--      <button mat-raised-button color="accent" *ngIf="isShown">{{Asound}}</button>-->
+
+
+<!--    </div>-->
+<!--&lt;!&ndash;    Here i need to get the worksheet in from worksheetfun&ndash;&gt;-->
+<!--&lt;!&ndash;    speech playback.&ndash;&gt;-->
+<!--&lt;!&ndash;    https://www.education.com/worksheet/article/coloring-learn-letter-a/&ndash;&gt;-->
+<!--  </div>-->
+
+<!--</section>-->
